@@ -1,0 +1,340 @@
+@import url(global.css);
+
+/* home hero */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* text-align: center; */
+    color: var(--white);
+    background: url("../../assets/icon/hero.gif") no-repeat center center/cover;
+    margin-top: 60px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.hero .btn-group {
+    display: flex;
+    gap: 15px;
+    /* justify-content: center; */
+}
+
+.hero .btn-group a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border-radius: 30px;
+    border: 2px solid var(--second-blue);
+}
+
+.hero .btn-primary {
+    background: linear-gradient(to top, var(--blue), var(--second-blue));
+    color: var(--white);
+}
+
+.hero .btn-primary:hover {
+    background: var(--blue-hover);
+}
+
+.hero .btn-secondary {
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    color: var(--white);
+}
+
+.hero .btn-secondary:hover {
+    background: var(--disabled-hover);
+}
+
+/* blog hero */
+.blog-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: url("../../assets/images/hero_blog.jpg") no-repeat center
+        center/cover;
+    margin-top: 60px;
+    text-align: center; /* Tambahkan ini */
+}
+
+.blog-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.blog-hero-content {
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    text-align: center; /* Pastikan ini */
+    margin: 0 auto; /* Tambahkan ini jika diperlukan */
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+.blog-hero p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* product hero */
+.product-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: url("../../assets/images/team_2.jpg") no-repeat center
+        center/cover;
+    margin-top: 60px;
+    text-align: center; /* Tambahkan ini */
+}
+
+.product-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.product-hero-content {
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    text-align: center; /* Pastikan ini */
+    margin: 0 auto; /* Tambahkan ini jika diperlukan */
+}
+
+.product-hero h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+.product-hero p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+.product-hero .product-hero-content a {
+    border-radius: 30px;
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 20px;
+    background: linear-gradient(to top, var(--primary), var(--secondary));
+    border: none;
+}
+
+.product-hero .product-hero-content .product-hero-btn {
+    margin-top: 50px;
+}
+
+.product-hero .product-hero-content a:hover {
+    background: linear-gradient(
+        to top,
+        var(--primary-hover),
+        var(--secondary-hover)
+    );
+}
+
+/* template hero */
+.template-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: url("../../assets/images/team_2.jpg") no-repeat center
+        center/cover;
+    margin-top: 60px;
+    text-align: center; /* Tambahkan ini */
+}
+
+.template-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.template-hero-content {
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    text-align: center; /* Pastikan ini */
+    margin: 0 auto; /* Tambahkan ini jika diperlukan */
+}
+
+.template-hero h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+.template-hero p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+/* webinar hero */
+.webinar-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: url("../../assets/images/webinar1.jpg") no-repeat center
+        center/cover;
+    margin-top: 60px;
+    text-align: center; /* Tambahkan ini */
+}
+
+.webinar-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.webinar-hero-content {
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    text-align: center; /* Pastikan ini */
+    margin: 0 auto; /* Tambahkan ini jika diperlukan */
+}
+
+.webinar-hero h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+.webinar-hero p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* contact hero */
+.contact-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: url("../../assets/images/team.webp") no-repeat center
+        center/cover;
+    margin-top: 60px;
+    text-align: center; /* Tambahkan ini */
+}
+
+.contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    text-align: center; /* Pastikan ini */
+    margin: 0 auto; /* Tambahkan ini jika diperlukan */
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+.contact-hero p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* home responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 0.9rem;
+    }
+
+    .hero p {
+        font-size: 0.5rem;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .hero-content {
+        margin: 20px;
+    }
+
+    .hero .btn-group a {
+        font-size: 0.5rem;
+        padding: 5px 10px;
+    }
+}

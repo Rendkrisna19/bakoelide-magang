@@ -1,0 +1,65 @@
+.article1-cont {
+    margin-top: 100px;
+    padding: 0 40px;
+}
+
+.article1-cont .header-cont {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 50px 20px 5px;
+}
+
+.article1-cont .header-cont .created {
+    color: var(--disabled);
+}
+.article1-cont .header-cont .creator {
+    color: var(--primary);
+}
+
+.article1-cont .header-cont .header-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.article1-cont .content-cont .cover-cont img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+.article1-cont .content-cont .cover-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.article1-cont .content-cont .content-desc p {
+    font-size: 15px;
+}
+.article1-cont .content-cont .content-desc ul li {
+    font-size: 15px;
+    margin: 10px 60px 10px 0;
+}
+
+.article1-cont .content-cont .content-desc ul{
+    width: 80%;
+    padding-left: 60px;
+}
+
+.article1-cont .content-cont .content-desc .adds {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.article1-cont .content-cont .content-desc {
+    padding: 10px;
+    font-weight: 300;
+}
+
+
+.p-cont{
+    padding: 0 30px;
+}

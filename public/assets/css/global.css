@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
+
+:root {
+    --primary: #f26522;
+    --secondary: #f58342;
+    --primary-bg-color: #fbd0ad;
+    --white: #fff;
+    --dark: #000000;
+    --disabled: #b0afaf;
+    --blue: #155e95;
+    --second-blue: #1871b1;
+    --blue-hover: #0e4a78;
+    --disabled-hover: #949393;
+    --disabled-text: #a9a9a9;
+    --soft-black: #1f1f1f;
+    --not-active: #f0f0f0;
+    --red: #fc423f;
+    --red-secondary: #ff6967;
+    --info: #00d2f7;
+    --info-secondary: #5beeff;
+    --success: #77cc22;
+    --success-secondary: #91dc3f;
+    --primary-hover: #bc3412;
+    --secondary-hover: #bc3412;
+}
+
+* {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.toast {
+    position: fixed;
+    top: 60px;
+    left: 30px;
+    z-index: 9999;
+    min-width: 250px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: var(--white);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 4s ease-in-out;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.toast.success {
+    background-color: rgba(165, 195, 132, 0.8); /* Transparansi hijau */
+    border: 3px solid #7cb342; /* Hijau tua */
+    -webkit-backdrop-filter: blur(8px); /* Blur untuk kompatibilitas Safari */
+    backdrop-filter: blur(8px);
+}
+
+.toast.error {
+    background-color: rgba(255, 87, 87, 0.8); /* Merah transparan */
+    border: 3px solid #d32f2f; /* Warna merah tua */
+    -webkit-backdrop-filter: blur(8px); /* Efek blur untuk Safari */
+    backdrop-filter: blur(8px); /* Efek blur */
+}
+
+.toast.warning {
+    background-color: rgba(255, 193, 7, 0.8); /* Kuning transparan */
+    border: 3px solid #ffa000; /* Warna kuning tua */
+    -webkit-backdrop-filter: blur(8px); /* Efek blur untuk Safari */
+    backdrop-filter: blur(8px); /* Efek blur */
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    transform: translateY(50%);
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #1da851;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float i {
+    font-size: 28px;
+}
