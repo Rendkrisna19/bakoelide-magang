@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left {
+    background: #fff6f0;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo .orange {
+    color: #f57c00;
+}
+
+.logo .yellow {
+    color: #fbc02d;
+}
+
+.logo p {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #ffe4cc;
+}
+
+.remember {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #ffa726, #fb8c00);
+    border: none;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.divider {
+    text-align: center;
+    margin: 10px 0;
+    color: #aaa;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.google-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.register-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: blue;
+    text-decoration: none;
+}
+
+.right {
+    background: linear-gradient(to right, white, #ff6d00);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-img {
+    max-width: 400px;
+    width: 100%;
+}
+
+.tagline {
+    position: absolute;
+    bottom: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.tagline span {
+    font-size: 36px;
+}
