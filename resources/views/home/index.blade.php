@@ -17,7 +17,7 @@
                 <a href="{{ route('blank-page') }}" class="btn-primary">
                     {{ $translator->translate('Start Personalizing') }}
                 </a>
-                <a href="{{ route('blank-page') }}" class="btn-secondary">
+                <a href="#template" class="btn-secondary">
                     {{ $translator->translate('Explore Templates') }}
                 </a>
             </div>
@@ -82,7 +82,7 @@
     </section>
 
     {{-- templates --}}
-    <section>
+    <section id="template"> 
         <div class="templates-section">
             <div class="templates-container text-xl font-bold ">
                 <h1>

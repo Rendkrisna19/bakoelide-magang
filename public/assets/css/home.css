@@ -1,3 +1,15 @@
+body{
+    scroll-behavior: smooth
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+#template{
+    scroll-behavior: smooth
+}
+
+
 @import url(global.css);
 /* score */
 .score-section {
