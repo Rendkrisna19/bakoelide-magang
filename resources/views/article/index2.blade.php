@@ -144,7 +144,7 @@
                         product.</p>
                 </div>
                 <div class="adds">
-                    <img src="{{ asset('assets/images/gojek.png') }}" alt="">
+                    {{-- <img src="{{ asset('assets/images/gojek.png') }}" alt=""> --}}
                 </div>
             </div>
             <div class="content-desc">

@@ -315,26 +315,40 @@
 }
 
 /* home responsive */
+/* home responsive */
 @media (max-width: 768px) {
     .hero {
-        height: auto;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: left;
     }
 
     .hero h1 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
 
     .hero p {
-        font-size: 0.5rem;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        margin-top: 0;
     }
+
     .hero-content {
         margin: 20px;
+        width: 100%;
     }
 
     .hero .btn-group a {
-        font-size: 0.5rem;
-        padding: 5px 10px;
+        font-size: 0.8rem;
+        padding: 8px 16px;
+        margin: 5px;
     }
 }
+

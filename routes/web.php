@@ -17,7 +17,7 @@ Route::get('/blog', function () {
 Route::get('/services', function () {
     return view('service.index');
 })->name('services')->middleware('translate');
-
+//education navbar
 Route::get('/webinar', function () {
     return view('webinar.index');
 })->name('webinar')->middleware('translate');
@@ -55,9 +55,6 @@ Route::get('/products/quiz', function () {
 Route::get('/blank-page', function () {
     return view('blank-page.index');
 })->name('blank-page')->middleware('translate');
-
-
-
 
 // All kategori template - lihat semua
 Route::get('/desain-terbaru', function () {

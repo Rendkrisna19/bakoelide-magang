@@ -1,5 +1,16 @@
 @import url(global.css);
 
+/* Tambahkan ini di CSS global kamu */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Supaya konten utama ngisi ruang */
+}
+
 .footer {
     background: linear-gradient(to top, var(--primary), var(--secondary));
     color: #fff;
@@ -91,8 +102,7 @@
 @media (max-width: 768px) {
     .footer {
         font-size: 10px;
-        position: absolute;
-        bottom: 0;
+      
     }
 
     .footer-links {
@@ -140,5 +150,45 @@
 
     .footer-section .social-icons {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 12px;
+        /* Hapus position: absolute dan bottom: 0 */
+        padding: 20px 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links .footer-section {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .footer-section .social-icons {
+        justify-content: center;
+    }
+
+    .footer-logo img {
+        max-width: 80px;
     }
 }

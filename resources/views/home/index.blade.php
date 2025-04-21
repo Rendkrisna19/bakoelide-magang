@@ -1,6 +1,7 @@
 @extends('main')
 @section('title', 'home')
 @section('hero')
+@include('layouts.app')
     {{-- hero --}}
     <section class="hero">
         <div class="hero-content">
@@ -52,31 +53,38 @@
                 </div> --}}
             </div>
             <div class="plan-container">
-                <h1>{{ $translator->translate('Who are you?') }}
-                    <span>{{ $translator->translate("Let's customize your experience") }}</span>
+                <h1 class="text-2xl text-center md:text-3xl font-semibold mb-4">
+                    {{ $translator->translate('Who are you?') }}
+                    <span class="block text-base md:text-lg text-gray-600 mt-2">
+                        {{ $translator->translate("Let's customize your experience") }}
+                    </span>
                 </h1>
-                <div class="plan-container-grid">
-                    <div class="container-one">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p class="text-with-border">{{ $translator->translate('Small Business Owner') }}</p>
+            
+                <div class="plan-container-grid grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="container-one flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-md transition">
+                        <i class="fa-solid fa-bag-shopping text-3xl mb-3"></i>
+                        <p class="text-with-border text-center text-lg font-medium">{{ $translator->translate('Small Business Owner') }}</p>
                     </div>
-                    <div class="container-two">
-                        <i class="fa-solid fa-headset"></i>
-                        <p class="text-with-border">{{ $translator->translate('Digital Marketer') }}</p>
+            
+                    <div class="container-two flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-md transition">
+                        <i class="fa-solid fa-headset text-3xl mb-3"></i>
+                        <p class="text-with-border text-center text-lg font-medium">{{ $translator->translate('Digital Marketer') }}</p>
                     </div>
-                    <div class="container-three">
-                        <i class="fa-solid fa-comments"></i>
-                        <p class="text-with-border">{{ $translator->translate('Creative Entrepreneur') }}</p>
+            
+                    <div class="container-three flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-md transition">
+                        <i class="fa-solid fa-comments text-3xl mb-3"></i>
+                        <p class="text-with-border text-center text-lg font-medium">{{ $translator->translate('Creative Entrepreneur') }}</p>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
     {{-- templates --}}
     <section>
         <div class="templates-section">
-            <div class="templates-container">
+            <div class="templates-container text-xl font-bold ">
                 <h1>
                     {{ $translator->translate('Creative') }} <span
                         class="colored">{{ $translator->translate('Templates') }}</span>
@@ -88,23 +96,23 @@
             <div class="carousel">
                 <div class="carousel-item active">
                     <div class="content">
-                        <h1>{{ $translator->translate('This is a template.') }}</h1>
-                        <p>{{ $translator->translate('Boost your business now!') }}</p>
-                        <img src="{{ asset('assets/images/template1.png') }}" alt="Avatar" class="avatar">
+                        {{-- <h1>{{ $translator->translate('This is a template.') }}</h1>
+                        <p>{{ $translator->translate('Boost your business now!') }}</p> --}}
+                        <img src="{{ asset('assets/images/Rectangle 100.png') }}" alt="Avatar" class="avatar">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="content">
                         <h1>{{ $translator->translate('This is a template.') }}</h1>
                         <p>{{ $translator->translate('Boost your business now!') }}</p>
-                        <img src="{{ asset('assets/images/template1.png') }}" alt="Avatar" class="avatar">
+                        <img src="{{ asset('assets/images/Rectangle 101.png') }}" alt="Avatar" class="avatar">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="content">
                         <h1>{{ $translator->translate('This is a template.') }}</h1>
                         <p>{{ $translator->translate('Boost your business now!') }}</p>
-                        <img src="{{ asset('assets/images/template1.png') }}" alt="Avatar" class="avatar">
+                        <img src="{{ asset('assets/images/Rectangle 102.png') }}" alt="Avatar" class="avatar">
                     </div>
                 </div>
             </div>
@@ -120,30 +128,38 @@
         </div>
     </section>
 
-    {{-- price --}}
-    <section>
-        <div class="price-section">
-            <div class="price-container">
-                <div class="price-img">
-                    <img src="{{ asset('assets/images/webinar.jpg') }}" alt="">
-                </div>
-                <div class="price-desc">
-                    <h1>Lorem ipsum dolor</h1>
-                    <hr>
-                    <h1>{{ $translator->translate('Description') }}</h1>
-                    <h1>{{ $translator->translate('Price') }}</h1>
-                    <hr>
-                    Rp. 99.999
-                    <br>
-                    <div class="btn-price-home">
-                        <a href="{{ route('blank-page') }}"><i class="fa-solid fa-cart-shopping"></i>
-                            {{ $translator->translate('Shop now') }}</a>
-                    </div>
+    <section class="py-8 px-2 bg-gray-50">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center">
+            <!-- Gambar Seminar -->
+            <div class="flex justify-center">
+                <img src="{{ asset('assets/images/webinar.jpg') }}" alt="Strategi Digital Marketing" class="rounded shadow-lg max-w-xs object-cover">
+            </div>
+    
+            <!-- Deskripsi Seminar -->
+            <div class="space-y-4 text-center md:text-left">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Strategi Digital Marketing</h1>
+                <hr class="border-gray-300 mx-auto w-20">
+    
+                <h2 class="text-lg font-semibold">{{ $translator->translate('Description') }}</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Seminar ini membahas strategi digital marketing terkini untuk membantu bisnis Anda berkembang di era digital.
+                    Anda akan belajar cara membuat campaign yang efektif, memanfaatkan media sosial, SEO, dan analisis data untuk mencapai target pasar yang tepat.
+                </p>
+    
+                <h2 class="text-lg font-semibold">{{ $translator->translate('Price') }}</h2>
+                <p class="text-yellow-800 text-xl font-bold">Rp 99.999</p>
+    
+                <div class="pt-4">
+                    <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-yellow-500 text-white px-5 py-2 rounded-full hover:bg-yellow-600 transition">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        {{ $translator->translate('Shop now') }}
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    
     {{-- testimonial --}}
     <section>
         <div class="testimonial-container">
@@ -188,7 +204,10 @@
         </div>
     </section>
 
+
 @endsection
+{{-- @include('footer.footer') --}}
+
 @push('script')
     <script>
         document.addEventListener("DOMContentLoaded", function() {

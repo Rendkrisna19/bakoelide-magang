@@ -208,3 +208,112 @@
 .pagination-controls button i {
     color: var(--disabled);
 }
+
+
+@media screen and (max-width: 768px) {
+    .blog-section .blog-title {
+        margin-left: 20px;
+        font-size: 24px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .container1 {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .container2 {
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .blog-container .container1 input {
+        font-size: 14px;
+    }
+
+    .blog-container .container1 .search-blog {
+        transform: translateY(-100%);
+        right: 10px;
+        font-size: 16px;
+    }
+
+    .blog-container .container1 .tags {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .blog-container .container1 .tags p {
+        margin: 10px;
+    }
+
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .content-item {
+        padding: 1rem;
+    }
+
+    .content-item .desc {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .content-item .desc .desc-content {
+        grid-column: span 1;
+    }
+
+    .content-item .blog-btn {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-item .blog-btn .blog-view-article-btn,
+    .content-item .blog-btn .blog-bookmark-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pagination-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog-section .blog-title {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .blog-container .container1 input {
+        padding: 6px 30px 6px 10px;
+        font-size: 12px;
+    }
+
+    .blog-container .container1 .search-blog {
+        font-size: 14px;
+    }
+
+    .content-item .desc .desc-content h3 {
+        font-size: 14px;
+    }
+
+    .content-item .desc .desc-content p {
+        font-size: 11px;
+    }
+
+    .pagination-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .pagination-controls button {
+        padding: 6px 10px;
+    }
+}

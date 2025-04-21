@@ -189,3 +189,69 @@
 .record-pagination-controls button i {
     color: var(--disabled);
 }
+
+@media (max-width: 768px) {
+    .webinar-section {
+        padding: 20px;
+    }
+
+    .webinar-container .filter-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .webinar-container .filter-container .webinar-search input,
+    .webinar-container .filter-container .sort-by,
+    .webinar-container .filter-container .webinar-pick-date {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .webinar-container .filter-container .search {
+        right: 20px;
+        transform: translateY(-250%);
+        font-size: 16px;
+    }
+
+    .coming-soon-container .pagination .page,
+    .coming-soon-container .paginations .pages {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .content-item .webinar-btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content-item .webinar-btn a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pages {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .pagination-controls,
+    .record-pagination-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .webinar-desc .webinar-desc-content h3 {
+        font-size: 14px;
+    }
+
+    .webinar-desc .webinar-desc-content p,
+    .webinar-date-time {
+        font-size: 12px;
+    }
+
+    .page-number {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}

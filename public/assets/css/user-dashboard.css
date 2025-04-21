@@ -435,3 +435,71 @@
     margin-top: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .user-dashboard-section {
+        margin: 60px 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .user-dashboard-section .user-profile-section {
+        margin: 0;
+        grid-column: span 1;
+    }
+
+    .user-dashboard-section .user-progress-section {
+        grid-column: span 1;
+        margin: 0;
+        grid-template-rows: none;
+        gap: 20px;
+    }
+
+    .user-dashboard-section
+        .user-progress-section
+        .progress-container
+        .small-progress-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .user-dashboard-section .user-progress-section .saved-container {
+        grid-row: span 1;
+    }
+
+    .tab-content#tab1.active,
+    .tab-content#tab2.active,
+    .tab-content#tab3.active {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-button {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+
+    .user-dashboard-section .user-profile-section h1 {
+        font-size: 16px;
+    }
+
+    .user-dashboard-section .user-profile-section .profile-img img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-dashboard-section .user-profile-section .input-section input,
+    .user-dashboard-section .user-profile-section .input-section select {
+        font-size: 11px;
+    }
+
+    .user-dashboard-section .user-profile-section .user-profile-btn a {
+        padding: 6px 30px;
+        font-size: 12px;
+    }
+
+    .user-dashboard-section
+        .user-progress-section
+        .progress-container
+        .small-progress-container
+        h1 {
+        font-size: 30px;
+    }
+}

@@ -104,8 +104,7 @@
 @media (max-width: 768px) {
     .footer {
         font-size: 10px;
-        position: absolute;
-        bottom: 0;
+        
     }
 
     .footer-links {

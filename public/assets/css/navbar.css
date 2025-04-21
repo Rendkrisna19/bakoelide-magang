@@ -228,3 +228,61 @@
         margin-left: 10px;
     }
 }
+
+/* Tambahan untuk memperhalus transisi nav saat mode mobile */
+.navbar .nav-links {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Toggle menu aktif saat hamburger diklik */
+.navbar .nav-links.show {
+    display: flex !important;
+}
+
+/* Biar logo dan hamburger sejajar saat mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar .left-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        margin-left: 10px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .navbar .icon-navbar {
+        margin-left: auto;
+        padding-right: 10px;
+    }
+
+    /* Atur ulang posisi search bar biar nggak numpuk */
+    .navbar .search-bar {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar .search-bar input {
+        width: 90%;
+    }
+
+    .dropdown-menu {
+        right: 10px;
+        top: 45px;
+    }
+}

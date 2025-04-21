@@ -158,6 +158,41 @@
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .score-section .plan-container {
+        padding: 0 15px;
+    }
+
+    .score-section .plan-container h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .score-section .plan-container .plan-container-grid {
+        grid-template-columns: 1fr; /* Satu kolom saat di HP */
+        margin: 0 10px 30px;
+        gap: 20px;
+    }
+
+    .score-section .plan-container .plan-container-grid .container-one i,
+    .container-two i,
+    .container-three i {
+        font-size: 80px;
+        margin-top: 30px;
+    }
+
+    .score-section .plan-container .plan-container-grid .container-one p,
+    .container-two p,
+    .container-three p {
+        font-size: 16px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white,
+        -2px -2px 0 white;
+    }
+}
+
+
 /* .templates-section::before {
     content: "";
     position: absolute;
