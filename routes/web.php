@@ -1,4 +1,5 @@
 <?php
+ini_set('max_execution_time', 120);
 
 use Illuminate\Support\Facades\Route;
 
@@ -56,6 +57,9 @@ Route::get('/blank-page', function () {
     return view('blank-page.index');
 })->name('blank-page')->middleware('translate');
 
+Route::get('/signup', function () {
+    return view('signup.signup');
+});
 
 
 
@@ -75,3 +79,42 @@ Route::get('/instagram-story', function () {
 Route::get('/video-tiktok', function () {
     return view('template.video_tiktok', ['kategori' => 'Video Tiktok']);
 });
+
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+
+use App\Http\Controllers\AuthController;
+
+
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+// Halaman beranda setelah login berhasil
+Route::get('/home', function () {
+    return view('home.index');  // Pastikan kamu punya view 'home.index.php'
+})->name('home.index');
+Route::get('/home', function () {
+    return view('home.blade');  // Jika menggunakan .php, pastikan nama file di resources/views sesuai
+})->name('home.blade');
+
+use App\Http\Controllers\QuizController;
+
+Route::post('/quiz/submit', [QuizController::class, 'submit'])->name('quiz.submit');
+
+Route::get('/small-business', function () {
+    return view('small-business.small-business');
+})->name('small-business');
+
+
+Route::get('/digital-marketer', function () {
+    return view('digital-marketer');
+})->name('digital-marketer');
+
+Route::get('/creative-entrepreneur', function () {
+    return view('creative-entrepreneur');
+})->name('creative-entrepreneur');
+
+
+
