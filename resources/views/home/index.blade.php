@@ -56,19 +56,26 @@
                     <span>{{ $translator->translate("Let's customize your experience") }}</span>
                 </h1>
                 <div class="plan-container-grid">
-                    <div class="container-one">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p class="text-with-border">{{ $translator->translate('Small Business Owner') }}</p>
-                    </div>
-                    <div class="container-two">
-                        <i class="fa-solid fa-headset"></i>
-                        <p class="text-with-border">{{ $translator->translate('Digital Marketer') }}</p>
-                    </div>
-                    <div class="container-three">
-                        <i class="fa-solid fa-comments"></i>
-                        <p class="text-with-border">{{ $translator->translate('Creative Entrepreneur') }}</p>
-                    </div>
-                </div>
+    <div class="container-one">
+        <a href="{{ route('small-business') }}" class="w-full h-full flex items-center justify-center">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p class="text-with-border">{{ $translator->translate('Small Business Owner') }}</p>
+        </a>
+    </div>
+    <div class="container-two">
+        <a href="{{ route('digital-marketer') }}" class="w-full h-full flex items-center justify-center">
+            <i class="fa-solid fa-headset"></i>
+            <p class="text-with-border">{{ $translator->translate('Digital Marketer') }}</p>
+        </a>
+    </div>
+    <div class="container-three">
+        <a href="{{ route('creative-entrepreneur') }}" class="w-full h-full flex items-center justify-center">
+            <i class="fa-solid fa-comments"></i>
+            <p class="text-with-border">{{ $translator->translate('Creative Entrepreneur') }}</p>
+        </a>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
