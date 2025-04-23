@@ -91,12 +91,11 @@ use App\Http\Controllers\AuthController;
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
-// Halaman beranda setelah login berhasil
 Route::get('/home', function () {
-    return view('home.index');  // Pastikan kamu punya view 'home.index.php'
+    return view('home.index');  
 })->name('home.index');
 Route::get('/home', function () {
-    return view('home.blade');  // Jika menggunakan .php, pastikan nama file di resources/views sesuai
+    return view('home.blade');  
 })->name('home.blade');
 
 use App\Http\Controllers\QuizController;
