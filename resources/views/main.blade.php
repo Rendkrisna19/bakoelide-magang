@@ -8,6 +8,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/splide.min.css') }}">
     @php
         // Pastikan $translator tersedia di semua halaman
         $translator = $translator ?? new \Stichoza\GoogleTranslate\GoogleTranslate(app()->getLocale());

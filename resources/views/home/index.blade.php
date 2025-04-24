@@ -119,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navigation">
+            <div class="navigation mx-auto">
                 <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="dots">
                     <span class="dot active"></span>
@@ -164,8 +164,8 @@
     
     
     {{-- testimonial --}}
-    <section class="md:py-20">
-        <div class="testimonial-container">
+    <section class="py-8 md:py-20">
+        <div class="testimonial-container container mx-auto">
             {{-- <div class="arrow-icon-container">
                 <img class="arrow-icon" src="{{ asset('assets/icon/arrow_icon.png') }}" alt="">
             </div> --}}
@@ -173,7 +173,7 @@
                 <h1>{{ $translator->translate('What do they say?') }}</h1>
                 <p>{{ $translator->translate("Let's take a look at their experience after joining.") }}</p>
             </div>
-            <div class="testimonial-wrapper">
+            {{-- <div class="testimonial-wrapper">
                 <div class="testimonial">
                     <div class="quote">“</div>
                     <img src="{{asset('img/Dwi_Nauli.jpg')}}" alt="User 1" class="user-img">
@@ -200,10 +200,31 @@
                 </div>
             </div>
 
-            <div class="navigation-buttons">
+            <div class="navigation-buttons ">
                 <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+            </div> --}}
+            <div id="my-slider" class="splide  w-full">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="p-4 shadow-lg relative flex flex-col gap-3 items-start">
+                            <h3>Rina, Pemilik Toko Online Fashion</h3>
+                            <p class="text-[#434243] text-xs">"Sebagai pemilik bisnis kecil, saya sering bingung harus mulai dari mana dalam mengembangkan strategi pemasaran dan operasional. Bakoel Ide benar-benar membantu saya dengan rekomendasi yang tepat berdasarkan kebutuhan bisnis saya. Setelah mengisi quiz, saya langsung mendapatkan panduan serta template yang sesuai, sehingga saya bisa fokus menjalankan bisnis tanpa harus mencari-cari referensi sendiri. Sangat praktis dan efisien!"</p>
+                            <button>{{ $translator->translate('Read more') }}</button>
+                        </div>
+                    </li>
+                    <li class="splide__slide">Slide 2</li>
+                    <li class="splide__slide">Slide 3</li>
+                    <li class="splide__slide">Slide 3</li>
+                    <li class="splide__slide">Slide 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex justify-between mt-4">
+                <button id="prevBtn" class="px-4 py-2 bg-gray-300 rounded">Prev</button>
+                <button id="nextBtn" class="px-4 py-2 bg-gray-300 rounded">Next</button>
+              </div>
         </div>
     </section>
 
@@ -304,3 +325,37 @@
         updateCarousel();
     </script>
 @endpush
+<script src="{{ asset('assets/js/splide.min.js') }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const splide = new Splide('#my-slider', {
+    type: 'loop',
+    perPage: 3,
+    pagination: false,
+    gap:'1rem',
+    arrows:false,
+    breakpoints: {
+        1024: {
+            gap:'94px',
+            perPage: 2,
+            gap: '10px'
+        },
+        640: {
+            perPage: 1,
+            arrows: false,
+        },
+        },
+    });
+
+  splide.mount();
+
+  // Tambahkan event listener setelah splide terdefinisi
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    splide.go("<");
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    splide.go(">");
+  });
+});
+  </script>
