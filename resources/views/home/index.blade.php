@@ -4,7 +4,7 @@
 @include('layouts.app')
     {{-- hero --}}
     <section class="hero">
-        <div class="hero-content">
+        <div class="hero-content container mx-auto">
             <h1>
                 {{ $translator->translate('Empower Your Business') }} <br>
                 {{ $translator->translate('With creative') }} <br>
@@ -13,11 +13,11 @@
             <p>
                 {{ $translator->translate('Explore personalized templates, tutorials, and solutions tailored to small businesses.') }}
             </p>
-            <div class="btn-group">
-                <a href="#quiz">
+            <div class="text-xs flex items-center gap-2">
+                <a href="#quiz" class="px-4 py-2 bg-white text-blue-500 rounded-md">
                     {{ $translator->translate('Start Personalizing') }}
                 </a>
-                <a href="#template" class="btn-secondary">
+                <a href="#template" class="">
                     {{ $translator->translate('Explore Templates') }}
                 </a>
             </div>
@@ -26,7 +26,7 @@
 @endsection
 @section('content')
     {{-- scores --}}
-    <section>
+    <section class="container mx-auto ">
         <div class="score-section">
             <div class="chat-img">
                 <img src="{{ asset('assets/images/chat.png') }}" alt="">
@@ -85,7 +85,7 @@
     </section>
 
     {{-- templates --}}
-    <section id="template"> 
+    <section id="template" class="py-20 container mx-auto"> 
         <div class="templates-section">
             <div class="templates-container text-xl font-bold ">
                 <h1>
@@ -131,11 +131,11 @@
         </div>
     </section>
 
-    <section class="py-8 px-2 bg-gray-50">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center">
+    <section class="py-20 px-2 bg-gray-50">
+        <div class=" mx-auto flex flex-col md:flex-row gap-6 items-center justify-center container md:justify-start md:ps-10 md:gap-24">
             <!-- Gambar Seminar -->
-            <div class="flex justify-center">
-                <img src="{{ asset('assets/images/webinar.jpg') }}" alt="Strategi Digital Marketing" class="rounded shadow-lg max-w-xs object-cover">
+            <div class="flex justify-start ">
+                <img src="{{ asset('assets/images/webinar.jpg') }}" alt="Strategi Digital Marketing" class="rounded shadow-lg max-w-xs object-cover ">
             </div>
     
             <!-- Deskripsi Seminar -->
@@ -143,8 +143,8 @@
                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Strategi Digital Marketing</h1>
                 <hr class="border-gray-300 mx-auto w-20">
     
-                <h2 class="text-lg font-semibold">{{ $translator->translate('Description') }}</h2>
-                <p class="text-gray-700 leading-relaxed">
+                {{-- <h2 class="text-lg font-semibold">{{ $translator->translate('Description') }}</h2> --}}
+                <p class="text-gray-700 leading-relaxed max-w-[626px]">
                     Seminar ini membahas strategi digital marketing terkini untuk membantu bisnis Anda berkembang di era digital.
                     Anda akan belajar cara membuat campaign yang efektif, memanfaatkan media sosial, SEO, dan analisis data untuk mencapai target pasar yang tepat.
                 </p>
@@ -164,11 +164,11 @@
     
     
     {{-- testimonial --}}
-    <section>
+    <section class="md:py-20">
         <div class="testimonial-container">
-            <div class="arrow-icon-container">
+            {{-- <div class="arrow-icon-container">
                 <img class="arrow-icon" src="{{ asset('assets/icon/arrow_icon.png') }}" alt="">
-            </div>
+            </div> --}}
             <div class="testimonial-title">
                 <h1>{{ $translator->translate('What do they say?') }}</h1>
                 <p>{{ $translator->translate("Let's take a look at their experience after joining.") }}</p>

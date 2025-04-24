@@ -1,14 +1,13 @@
-body{
-    scroll-behavior: smooth
+body {
+    scroll-behavior: smooth;
 }
 html {
     scroll-behavior: smooth;
-  }
-
-#template{
-    scroll-behavior: smooth
 }
 
+#template {
+    scroll-behavior: smooth;
+}
 
 @import url(global.css);
 /* score */
@@ -200,10 +199,9 @@ html {
         margin-top: 30px;
         margin-bottom: 15px;
         text-shadow: 2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white,
-        -2px -2px 0 white;
+            -2px -2px 0 white;
     }
 }
-
 
 /* .templates-section::before {
     content: "";
