@@ -13,6 +13,7 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         max-width: 700px;
+        width: 700px;
         margin: 10% 0;
     }
 
@@ -97,6 +98,11 @@
         margin-right: 10px;
     }
 
+    input.tantangan_lainya  {
+    border-top: none;    /* Menghilangkan border atas */
+    border-left: none;   /* Menghilangkan border kiri */
+    border-right: none; 
+    }
 
     input[type="checkbox"] {
             accent-color: #e65c00; /* CSS baru untuk mengubah warna checkbox yang dicentang */
@@ -117,6 +123,7 @@
             background-color: #e65c00; /* Ganti background menjadi merah saat dicentang */
             border-color: #e65c00; /* Ubah border menjadi merah */
         }
+
 </style>
 @section('content')
     <section class="quiz-cont">
@@ -127,57 +134,55 @@
             </div>
 
             <form>
-                {{-- <label>Siapa Anda?<span class="required">*</span></label> --}}
+                <label>Apa fokus utama anda saat ini?<span class="required">*</span></label>
                 <div class="radio-group">
-                    {{-- <div class="quiz-answer">
+                    <div class="quiz-answer">
                         <input type="radio" id="pemilik-bisnis" name="siapa-anda">
-                        <small for="pemilik-bisnis">Saya adalah pemilik bisnis kecil dan ingin meningkatkan penjualan
-                            online.
+                        <small for="pemilik-bisnis">Optimasi Konten untuk media sosial
                         </small>
-                    </div> --}}
-                    {{-- <div class="quiz-answer">
+                    </div>
+                    <div class="quiz-answer">
                         <input type="radio" id="digital-strategist" name="siapa-anda">
-                        <small for="digital-strategist">Saya seorang perencana digital yang merancang strategi dari
-                            awal.</small>
-                    </div> --}}
-                    {{-- <div class="quiz-answer">
+                        <small for="digital-strategist">Hyper personalisasi dalam email marketing</small>
+                    </div>
+                    <div class="quiz-answer">
                         <input type="radio" id="kreatif-branding" name="siapa-anda">
-                        <small for="kreatif-branding">Saya seorang kreatif yang ingin mengembangkan branding dan strategi
-                            pemasaran saya.</small>
-                    </div> --}}
+                        <small for="kreatif-branding">Meningkatkan ROI dari iklan digital</small>
+                    </div>
+
+                    <div class="quiz-answer">
+                        <input type="radio" id="kreatif-branding" name="siapa-anda">
+                        <small for="kreatif-branding">Menganalisis perilaku pelanggan</small>
+                    </div>
                 </div>
 
-                <label for="jenis-bisnis">Apa Jenis Bisnis Anda?<span class="required">*</span></label>
-                <select id="jenis-bisnis">
-                    <option value="">Pilih jenis bisnis yang sedang Anda jalani</option>
-                </select>
+            
 
-                <label>Apa Tujuan Utama Anda?<span class="required">*</span></label>
+                <label>Platform utama anda?<span class="required">*</span></label>
                 <div class="radio-group">
                     <div class="quiz-answer">
                         <input type="radio" id="meningkatkan-penjualan" name="tujuan">
-                        <small for="meningkatkan-penjualan">Saya ingin mencoba social commerce dan meningkatkan
-                            penjualan.</small>
+                        <small for="meningkatkan-penjualan">Instagram</small>
                     </div>
                     <div class="quiz-answer">
                         <input type="radio" id="menarik-konten" name="tujuan">
-                        <small for="menarik-konten">Saya ingin mengetahui cara membuat konten yang lebih menarik.</small>
+                        <small for="menarik-konten">TikTok</small>
                     </div>
                     <div class="quiz-answer">
                         <input type="radio" id="membantu-audience" name="tujuan">
-                        <small for="membantu-audience">Saya membutuhkan informasi dan ide untuk audience saya.</small>
+                        <small for="membantu-audience">Facebook</small>
                     </div>
                     <div class="quiz-answer">
                         <input type="radio" id="trend-market" name="tujuan">
-                        <small for="trend-market">Saya ingin mengetahui strategi branding untuk bisnis saya.</small>
+                        <small for="trend-market">Google Ads</small>
                     </div>
                 </div>
 
-                <label>Apa Tantangan Terbesar Anda Saat Ini?<span class="required">*</span></label>
+                <label>Apa tantangan terbesar anda<span class="required">*</span></label>
                 <div class="radio-group">
                     <div class="quiz-answer">
                         <input type="checkbox" id="engagement" name="tantangan">
-                        <small for="engagement">Saya kesulitan mendapatkan engagement di media sosial.</small>
+                        <small for="engagement">Engagemenet konten rendah</small>
                     </div>
                     <div class="quiz-answer">
                         <input type="checkbox" id="menjual-produk" name="tantangan">
@@ -185,36 +190,23 @@
                     </div>
                     <div class="quiz-answer">
                         <input type="checkbox" id="tidak-punya-waktu" name="tantangan">
-                        <small for="tidak-punya-waktu">Saya tidak punya waktu untuk membuat konten.</small>
+                        <small for="tidak-punya-waktu">Kesulitas membuat hyper-personalisasi</small>
                     </div>
                     <div class="quiz-answer">
                         <input type="checkbox" id="bimbingan" name="tantangan">
-                        <small for="bimbingan">Saya membutuhkan bimbingan tentang strategi digital.</small>
+                        <small for="bimbingan">Analitik data terlalu rumit</small>
+                    </div>
+                    <div class="quiz-answer">
+                        <input type="checkbox" id="lainnya" name="tantangan">
+                        <small for="lainnya">Konversi iklan digital rendah</small>
                     </div>
                     <div class="quiz-answer">
                         <input type="checkbox" id="lainnya" name="tantangan">
                         <small for="lainnya">Lainnya.</small>
+                        <input type="text" id="lainnya" name="tantangan_lainya" class="tantangan_lainya">
                     </div>
+                    
 
-                    <label>Apakah Anda Pernah Menggunakan Platform Social Commerce?<span class="required">*</span></label>
-                    <div class="radio-group">
-                        <div class="quiz-answer">
-                            <input type="radio" id="instagram-shopping" name="social-commerce">
-                            <small for="instagram-shopping">Ya, saya menggunakan Instagram Shopping.</small>
-                        </div>
-                        <div class="quiz-answer">
-                            <input type="radio" id="tiktok-shop" name="social-commerce">
-                            <small for="tiktok-shop">Ya, saya menggunakan TikTok Shop.</small>
-                        </div>
-                        <div class="quiz-answer">
-                            <input type="radio" id="whatsapp-business" name="social-commerce">
-                            <small for="whatsapp-business">Ya, saya menggunakan WhatsApp Business.</small>
-                        </div>
-                        <div class="quiz-answer">
-                            <input type="radio" id="tidak-menggunakan" name="social-commerce">
-                            <small for="tidak-menggunakan">Tidak, saya tidak pernah menggunakan platform tersebut.</small>
-                        </div>
-                    </div>
 
                     <button type="submit">Submit</button>
             </form>

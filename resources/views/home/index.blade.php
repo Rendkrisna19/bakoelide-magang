@@ -14,7 +14,7 @@
                 {{ $translator->translate('Explore personalized templates, tutorials, and solutions tailored to small businesses.') }}
             </p>
             <div class="btn-group">
-                <a href="{{ route('blank-page') }}" class="btn-primary">
+                <a href="#quiz">
                     {{ $translator->translate('Start Personalizing') }}
                 </a>
                 <a href="#template" class="btn-secondary">
@@ -52,29 +52,32 @@
                     </div>
                 </div> --}}
             </div>
-            <div class="plan-container">
-                <h1 class="text-2xl text-center md:text-3xl font-semibold mb-4">
-                    {{ $translator->translate('Who are you?') }}
-                    <span class="block text-base md:text-lg text-gray-600 mt-2">
-                        {{ $translator->translate("Let's customize your experience") }}
-                    </span>
+            <div class="plan-container" id="quiz">
+                <h1>{{ $translator->translate('Who are you?') }}
+                    <span>{{ $translator->translate("Let's customize your experience") }}</span>
                 </h1>
-            
-                <div class="plan-container-grid grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="container-one flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-md transition">
-                        <i class="fa-solid fa-bag-shopping text-3xl mb-3"></i>
-                        <p class="text-with-border text-center text-lg font-medium">{{ $translator->translate('Small Business Owner') }}</p>
+                <div class="plan-container-grid">
+                  <a href="/quiz">
+                    <div class="container-one"  style="padding: 20px;">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p class="text-with-border">{{ $translator->translate('Small Business Owner') }}</p>
                     </div>
-            
-                    <div class="container-two flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-md transition">
-                        <i class="fa-solid fa-headset text-3xl mb-3"></i>
-                        <p class="text-with-border text-center text-lg font-medium">{{ $translator->translate('Digital Marketer') }}</p>
+                  </a>
+
+                  <a href="/quiz2">
+                    <div class="container-two"  style="padding: 20px;">
+                        <i class="fa-solid fa-headset"></i>
+                        <p class="text-with-border">{{ $translator->translate('Digital Marketer') }}</p>
                     </div>
-            
-                    <div class="container-three flex flex-col items-center p-6 border rounded-lg shadow hover:shadow-md transition">
-                        <i class="fa-solid fa-comments text-3xl mb-3"></i>
-                        <p class="text-with-border text-center text-lg font-medium">{{ $translator->translate('Creative Entrepreneur') }}</p>
+                </a>
+
+                  <a href="/quiz3">
+                    <div class="container-three"  style="padding: 20px;">
+                        <i class="fa-solid fa-comments"></i>
+                        <p class="text-with-border">{{ $translator->translate('Creative Entrepreneur') }}</p>
                     </div>
+                </a>
+                
                 </div>
             </div>
             

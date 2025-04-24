@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('home.index');
@@ -44,9 +45,6 @@ Route::get('/blog/article/2', function () {
     return view('article.index2');
 })->name('article2')->middleware('translate');
 
-Route::get('/user-dashboard', function () {
-    return view('user-dashboard.dashboard');
-})->name('user-dashboard')->middleware('translate');
 
 Route::get('/products/quiz', function () {
     return view('quiz.index');
@@ -72,3 +70,35 @@ Route::get('/instagram-story', function () {
 Route::get('/video-tiktok', function () {
     return view('template.video_tiktok', ['kategori' => 'Video Tiktok']);
 });
+
+Route::get('/quiz', function () {
+    return view('quiz.index');
+})->name('quiz1')->middleware('translate');
+
+Route::get('/quiz2', function () {
+    return view('quiz.index2');
+})->name('quiz2')->middleware('translate');
+
+Route::get('/quiz3', function () {
+    return view('quiz.index3');
+})->name('quiz3')->middleware('translate');
+Route::get('/products/quiz', function () {
+    return view('quiz.index');
+})->name('quiz')->middleware('translate');
+
+//auth login backend
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Dashboard (requires auth)
+// Route::get('/user-dashboard', [AuthController::class, 'dashboard'])->middleware('auth')->name('dashboard');
+
+
+Route::get('/user-dashboard', function () {
+    return view('user-dashboard.dashboard');
+})->name('user-dashboard')->middleware('translate');

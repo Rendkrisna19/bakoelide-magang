@@ -100,7 +100,7 @@
                 <ul>
                     @auth
                         <li>
-                            <p>Mawar Indah</p>
+                            <p>{{ Auth::user()->name }}</p>
                         </li>
                         <li>
                             <a href="{{ route('user-dashboard') }}">
@@ -128,11 +128,14 @@
                             </ul>
                         </li>
                         <div id="google_translate_element" style="display:none;"></div>
-                        <li>
-                            <a href="{{ route('blank-page') }}">
-                                <i class="fa-solid fa-right-from-bracket"></i> {{ $translator->translate('Logout') }}
-                            </a>
-                        </li>
+                        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                            @csrf
+                        </form>
+                        
+                        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="fa-solid fa-right-from-bracket"></i> {{ $translator->translate('Logout') }}
+                        </a>
                     @endauth
 
                     @guest
