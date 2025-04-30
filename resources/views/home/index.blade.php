@@ -86,7 +86,7 @@
 
     {{-- templates --}}
     <section id="template" class="py-20 container mx-auto"> 
-        <div class="templates-section">
+        <div class="templates-section flex-col">
             <div class="templates-container text-xl font-bold ">
                 <h1>
                     {{ $translator->translate('Creative') }} <span
@@ -94,13 +94,45 @@
                     {{ $translator->translate('for every need') }}
                 </h1>
             </div>
+            <div id="my-slider1" class="splide w-full">
+                <div class="splide__track py-8 lg:h-80">
+                  <ul class="splide__list ">
+                    <li class="splide__slide">
+                      <div class="slide-item  rounded-xl shadow-xl lg:h-56">
+                        <img src="{{  asset('assets/images/templates1.png') }}" alt="template" class="rounded-xl object-cover h-full w-full">
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="slide-item  rounded-xl shadow-xl lg:h-56">
+                        <img src="{{  asset('assets/images/templates1.png') }}" alt="template" class="rounded-xl object-cover h-full w-full">
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="slide-item  rounded-xl shadow-xl lg:h-56">
+                        <img src="{{  asset('assets/images/templates1.png') }}" alt="template" class="rounded-xl object-cover h-full w-full">
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="splide__controls">
+                <button id="prevBtn1" class="custom-prev">Prev</button>
+              
+                <!-- Custom Pagination -->
+                <div id="custom-pagination" class="splide__pagination">
+                  <!-- Pagination items will be added here dynamically -->
+                </div>
+              
+                <button id="nextBtn1" class="custom-next">Next</button>
+              </div>
         </div>
-        <div class="carousel-container">
+        {{-- <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-item active">
                     <div class="content">
-                        {{-- <h1>{{ $translator->translate('This is a template.') }}</h1>
-                        <p>{{ $translator->translate('Boost your business now!') }}</p> --}}
+                        <h1>{{ $translator->translate('This is a template.') }}</h1>
+                        <p>{{ $translator->translate('Boost your business now!') }}</p>
                         <img src="{{ asset('assets/images/Rectangle 100.png') }}" alt="Avatar" class="avatar">
                     </div>
                 </div>
@@ -128,7 +160,8 @@
                 </div>
                 <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
-        </div>
+        </div> --}}
+        
     </section>
 
     <section class="py-20 px-2 bg-gray-50">
@@ -153,7 +186,7 @@
                 <p class="text-yellow-800 text-xl font-bold">Rp 99.999</p>
     
                 <div class="pt-4">
-                    <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-yellow-500 text-white px-5 py-2 rounded-full hover:bg-yellow-600 transition">
+                    <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-[#F26522] text-white px-5 py-2 rounded-full hover:bg-yellow-600 transition">
                         <i class="fa-solid fa-cart-shopping"></i>
                         {{ $translator->translate('Shop now') }}
                     </a>
@@ -166,64 +199,29 @@
     {{-- testimonial --}}
     <section class="py-8 md:py-20">
         <div class="testimonial-container container mx-auto">
-            {{-- <div class="arrow-icon-container">
-                <img class="arrow-icon" src="{{ asset('assets/icon/arrow_icon.png') }}" alt="">
-            </div> --}}
+           
             <div class="testimonial-title">
-                <h1>{{ $translator->translate('What do they say?') }}</h1>
+                <h1 class="lg:text-5xl">{{ $translator->translate('What do they say?') }}</h1>
                 <p>{{ $translator->translate("Let's take a look at their experience after joining.") }}</p>
             </div>
-            {{-- <div class="testimonial-wrapper">
-                <div class="testimonial">
-                    <div class="quote">“</div>
-                    <img src="{{asset('img/Dwi_Nauli.jpg')}}" alt="User 1" class="user-img">
-                    <h3>Mawar Indah</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua.</p>
-                    <button class="read-more">{{ $translator->translate('Read more') }}</button>
-                </div>
-                <div class="testimonial">
-                    <div class="quote">“</div>
-                    <img src="{{asset('img/Antonius_Ardi.jpg')}}" alt="User 2" class="user-img">
-                    <h3>Joko Santoso</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua.</p>
-                    <button class="read-more">{{ $translator->translate('Read more') }}</button>
-                </div>
-                <div class="testimonial">
-                    <div class="quote">“</div>
-                    <img src="{{asset('img/Ruben_Ray.jpg')}}" alt="User 3" class="user-img">
-                    <h3>Siti Aisyah</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua.</p>
-                    <button class="read-more">{{ $translator->translate('Read more') }}</button>
-                </div>
-            </div>
-
-            <div class="navigation-buttons ">
-                <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div> --}}
-            <div id="my-slider" class="splide  w-full">
-                <div class="splide__track">
+           
+              <div id="my-slider" class="splide w-full max-w-full">
+                <div class="splide__track py-8 lg:py-10">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                        <div class="p-4 shadow-lg relative flex flex-col gap-3 items-start">
-                            <h3>Rina, Pemilik Toko Online Fashion</h3>
-                            <p class="text-[#434243] text-xs">"Sebagai pemilik bisnis kecil, saya sering bingung harus mulai dari mana dalam mengembangkan strategi pemasaran dan operasional. Bakoel Ide benar-benar membantu saya dengan rekomendasi yang tepat berdasarkan kebutuhan bisnis saya. Setelah mengisi quiz, saya langsung mendapatkan panduan serta template yang sesuai, sehingga saya bisa fokus menjalankan bisnis tanpa harus mencari-cari referensi sendiri. Sangat praktis dan efisien!"</p>
-                            <button>{{ $translator->translate('Read more') }}</button>
-                        </div>
+                      <div class="relative w-full max-w-[725px] mx-auto p-4 rounded-lg shadow-md lg:shadow-[0_0_30px_10px_rgba(0,0,0,0.25)] flex flex-col gap-3 items-start lg:gap-9 lg:p-6">
+                        <img src="{{asset('img/Antonius_Ardi.jpg')}}" alt="User 2" class="absolute border border-[#F26522] right-2 top-1 size-12 shadow-md rounded-full lg:size-20 lg:top-2">
+                        <h3 class="font-bold lg:text-xl max-w-[80%]">Rina, Pemilik Toko Online Fashion dsada</h3>
+                        <p class="text-[#434243] text-xs lg:text-base">"Sebagai pemilik bisnis kecil, saya sering bingung harus mulai dari mana dalam mengembangkan strategi pemasaran dan operasional. Bakoel Ide benar-benar membantu saya dengan rekomendasi yang tepat berdasarkan kebutuhan bisnis saya. Setelah mengisi quiz, saya langsung mendapatkan panduan serta template yang sesuai, sehingga saya bisa fokus menjalankan bisnis tanpa harus mencari-cari referensi sendiri. Sangat praktis dan efisien!"</p>
+                        <button class="bg-[#F26522] text-white px-4 py-2 rounded-full">{{ $translator->translate('Read more') }}</button>
+                      </div>
                     </li>
-                    <li class="splide__slide">Slide 2</li>
-                    <li class="splide__slide">Slide 3</li>
-                    <li class="splide__slide">Slide 3</li>
-                    <li class="splide__slide">Slide 3</li>
                   </ul>
                 </div>
               </div>
-              <div class="flex justify-between mt-4">
-                <button id="prevBtn" class="px-4 py-2 bg-gray-300 rounded">Prev</button>
-                <button id="nextBtn" class="px-4 py-2 bg-gray-300 rounded">Next</button>
+              <div class="flex justify-between mt-4 gap-3">
+                <button id="prevBtn" class="p-4 rounded-full text-[#F26522] border border-[#F26522] lg:size-16 text-sm"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="nextBtn" class="p-4 rounded-full text-[#F26522] border border-[#F26522] lg:size-16 text-sm"><i class="fa-solid fa-chevron-right"></i></button>
               </div>
         </div>
     </section>
@@ -332,21 +330,60 @@
     type: 'loop',
     perPage: 3,
     pagination: false,
-    gap:'1rem',
     arrows:false,
+    gap:'2rem',
+    focus:'center',
     breakpoints: {
         1024: {
-            gap:'94px',
-            perPage: 2,
-            gap: '10px'
+            perPage: 3,
+            gap:'2rem',
+            focus:"center",
+            peek: {
+            before: 50, // terlihat sebagian di kiri
+            after: 50   // terlihat sebagian di kanan
+        },
         },
         640: {
             perPage: 1,
+            gap:"20px",
             arrows: false,
         },
         },
     });
 
+    const splide1 = new Splide('#my-slider1', {
+    type: 'loop',
+    perPage: 3,
+    focus: 'center',
+    pagination: false,
+    arrows: false,
+    gap: '30px',
+    peek: {
+      before: 100,
+      after: 100,
+    },
+    breakpoints: {
+        breakpoints: {
+      1024: {
+        perPage: 3,
+        gap: '20px',
+        peek: {
+          before: 50,
+          after: 50,
+        },
+      },
+      640: {
+        perPage: 1,
+        peek: {
+          before: 0,
+          after: 0,
+        },
+      },
+    }
+    }
+  });
+
+  splide1.mount();
   splide.mount();
 
   // Tambahkan event listener setelah splide terdefinisi
@@ -358,4 +395,6 @@
     splide.go(">");
   });
 });
+
+
   </script>
