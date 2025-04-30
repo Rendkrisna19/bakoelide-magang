@@ -209,11 +209,33 @@
                 <div class="splide__track py-8 lg:py-10">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <div class="relative w-full max-w-[725px] mx-auto p-4 rounded-lg shadow-md lg:shadow-[0_0_30px_10px_rgba(0,0,0,0.25)] flex flex-col gap-3 items-start lg:gap-9 lg:p-6">
+                      <div class="relative w-full max-w-[725px] mx-auto p-4 rounded-lg shadow-md lg:shadow-[0_0_30px_10px_rgba(0,0,0,0.25)] flex flex-col gap-3 justify-between items-start lg:gap-9 lg:p-6 lg:h-[400px]">
                         <img src="{{asset('img/Antonius_Ardi.jpg')}}" alt="User 2" class="absolute border border-[#F26522] right-2 top-1 size-12 shadow-md rounded-full lg:size-20 lg:top-2">
-                        <h3 class="font-bold lg:text-xl max-w-[80%]">Rina, Pemilik Toko Online Fashion dsada</h3>
+                        <h3 class="font-bold lg:text-xl max-w-[80%]">Rina, Pemilik Toko Online Fashion </h3>
                         <p class="text-[#434243] text-xs lg:text-base">"Sebagai pemilik bisnis kecil, saya sering bingung harus mulai dari mana dalam mengembangkan strategi pemasaran dan operasional. Bakoel Ide benar-benar membantu saya dengan rekomendasi yang tepat berdasarkan kebutuhan bisnis saya. Setelah mengisi quiz, saya langsung mendapatkan panduan serta template yang sesuai, sehingga saya bisa fokus menjalankan bisnis tanpa harus mencari-cari referensi sendiri. Sangat praktis dan efisien!"</p>
-                        <button class="bg-[#F26522] text-white px-4 py-2 rounded-full">{{ $translator->translate('Read more') }}</button>
+                        <div>
+                            <button class="bg-[#F26522] text-white px-4 py-2 rounded-full">{{ $translator->translate('Read more') }}</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="relative w-full max-w-[725px] mx-auto p-4 rounded-lg shadow-md lg:shadow-[0_0_30px_10px_rgba(0,0,0,0.25)] flex flex-col justify-between gap-3 items-start lg:gap-9 lg:p-6 lg:h-[400px]">
+                        <img src="{{asset('img/Antonius_Ardi.jpg')}}" alt="User 2" class="absolute border border-[#F26522] right-2 top-1 size-12 shadow-md rounded-full lg:size-20 lg:top-2">
+                        <h3 class="font-bold lg:text-xl max-w-[80%]">Andi, Social Media Strategist</h3>
+                        <p class="text-[#434243] text-xs lg:text-base">"Saya sering mencari referensi untuk strategi pemasaran digital yang up-to-date dan aplikatif. Bakoel Ide memberikan solusi yang benar-benar sesuai dengan tantangan yang saya hadapi. Dengan mengisi quiz, saya mendapatkan rekomendasi template dan panduan yang langsung bisa diterapkan. Sangat membantu dalam menyusun strategi yang lebih terarah dan efektif!"</p>
+                        <div>
+                            <button class="bg-[#F26522] text-white px-4 py-2 rounded-full">{{ $translator->translate('Read more') }}</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="relative w-full max-w-[725px] mx-auto p-4 rounded-lg shadow-md lg:shadow-[0_0_30px_10px_rgba(0,0,0,0.25)] flex flex-col justify-between gap-3 items-start lg:gap-9 lg:p-6 lg:h-[400px]">
+                        <img src="{{asset('img/Antonius_Ardi.jpg')}}" alt="User 2" class="absolute border border-[#F26522] right-2 top-1 size-12 shadow-md rounded-full lg:size-20 lg:top-2">
+                        <h3 class="font-bold lg:text-xl max-w-[80%]">Riza, Freelance Graphic Designer</h3>
+                        <p class="text-[#434243] text-xs lg:text-base">"Sebagai pemilik bisnis kecil, saya sering bingung harus mulai dari mana dalam mengembangkan strategi pemasaran dan operasional. Bakoel Ide benar-benar membantu saya dengan rekomendasi yang tepat berdasarkan kebutuhan bisnis saya. Setelah mengisi quiz, saya langsung mendapatkan panduan serta template yang sesuai, sehingga saya bisa fokus menjalankan bisnis tanpa harus mencari-cari referensi sendiri. Sangat praktis dan efisien!"</p>
+                        <div>
+                            <button class="bg-[#F26522] text-white px-4 py-2 rounded-full">{{ $translator->translate('Read more') }}</button>
+                        </div>
                       </div>
                     </li>
                   </ul>
@@ -331,12 +353,12 @@
     perPage: 3,
     pagination: false,
     arrows:false,
-    gap:'2rem',
+    gap:'3rem',
     focus:'center',
     breakpoints: {
         1024: {
             perPage: 3,
-            gap:'2rem',
+            gap:'3rem',
             focus:"center",
             peek: {
             before: 50, // terlihat sebagian di kiri
