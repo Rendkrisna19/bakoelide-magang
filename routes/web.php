@@ -102,3 +102,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/user-dashboard', function () {
     return view('user-dashboard.dashboard');
 })->name('user-dashboard')->middleware('translate');
+
+
+//halaman baru 
+Route::get('/chart', function () {
+    return view('chart.index');
+})->name('chart')->middleware('translate');

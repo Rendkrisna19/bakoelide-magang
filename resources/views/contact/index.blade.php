@@ -1,4 +1,6 @@
 @extends('main')
+@extends('layouts.app')
+
 @section('title', 'contact')
 @section('hero')
     <section class="contact-hero">
@@ -219,4 +221,31 @@
             </div>
         </div>
     </section>
+
+    <section class="  flex items-center justify-center p-4">
+
+        <div class="max-w-6xl w-full flex flex-col md:flex-row items-center gap-8">
+          <!-- Gambar -->
+          <div class="w-full md:w-1/2 flex justify-center">
+            <img src="{{ asset('assets/images/contactus.png') }}" alt="Konsultasi" class="w-80 md:w-full object-contain">
+          </div>
+      
+          <!-- Form Konsultasi -->
+          <div class="w-full md:w-1/2 bg-orange-200 p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">KONSULTASIKAN DENGAN KAMI</h2>
+            <p class="text-gray-600 mb-6 text-sm">
+              Dengan ini Anda percaya bahwa kami akan sungguh-sungguh membantu Anda untuk meningkatkan Produk & Layanantivitas bisnis Anda dan menambah nilai kemajuan bisnis Anda.
+            </p>
+            <form class="space-y-4">
+              <input type="text" placeholder="Nama" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
+              <input type="email" placeholder="Email" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
+              <input type="text" placeholder="No. Telepon" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
+              <input type="text" placeholder="Subjek" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400">
+              <textarea placeholder="Deskripsi" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400" rows="4"></textarea>
+              <button type="submit" class="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 transition">Kirim</button>
+            </form>
+          </div>
+        </div>
+
+        </section
 @endsection

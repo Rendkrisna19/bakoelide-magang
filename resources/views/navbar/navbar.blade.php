@@ -56,16 +56,14 @@
         display: block;
     }
 </style>
-<nav class="navbar ">
-    <div class="container mx-auto flex items-center justify-between">
-
-        <div class="logo">
-            <a href="{{ route('home') }}">
-                <img src="{{ asset('assets/icon/logo.png') }}" class="logo">
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="{{ route('home') }}"
+<nav class="navbar">
+    <div class="logo">
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('assets/icon/logo.png') }}" class="logo">
+        </a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="{{ route('home') }}"
                 class="{{ Request::is('/*') ? 'active' : '' }}">{{ $translator->translate('Home') }}</a></li>
         <li><a href="{{ route('product') }}"
                 class="{{ Request::is('products*') ? 'active' : '' }}">{{ $translator->translate('Product & Services') }}</a>
@@ -157,7 +155,7 @@
                         </li>
                         <div id="google_translate_element" style="display:none;"></div>
                         <li>
-                            <a href="{{ route('blank-page') }}">
+                            <a href="{{ route('login') }}">
                                 <i class="fa-solid fa-right-to-bracket"></i> {{ $translator->translate('Login') }}
                             </a>
                         </li>
@@ -169,6 +167,4 @@
     <div class="hamburger">
         <i class="fa-solid fa-ellipsis"></i>
     </div>
-</div>
-
 </nav>

@@ -123,7 +123,7 @@
         <div
             class="w-full md:w-1/2 flex items-center justify-center bg-gradient-to-br from-orange-200 to-orange-600 text-white relative px-4 py-10">
             <div class="text-center">
-                <img src="https://cdn.pixabay.com/photo/2023/04/26/16/11/3d-7949360_960_720.png" alt="Celebrate"
+                <img src="{{ asset('assets/images/logingambar.jpg') }}" alt="Celebrate"
                     class="w-64 mx-auto mb-6 drop-shadow-md" />
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg leading-tight">
                     ANALYZE YOUR <br />

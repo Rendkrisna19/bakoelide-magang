@@ -150,10 +150,10 @@
                 </p>
     
                 <h2 class="text-lg font-semibold">{{ $translator->translate('Price') }}</h2>
-                <p class="text-yellow-800 text-xl font-bold">Rp 99.999</p>
+                <p class="text-orange-600 text-xl font-bold">Rp 0</p>
     
                 <div class="pt-4">
-                    <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-yellow-500 text-white px-5 py-2 rounded-full hover:bg-yellow-600 transition">
+                    <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-900 transition">
                         <i class="fa-solid fa-cart-shopping"></i>
                         {{ $translator->translate('Shop now') }}
                     </a>
