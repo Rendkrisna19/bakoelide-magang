@@ -116,7 +116,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="splide__controls">
+              {{-- <div class="splide__controls">
                 <button id="prevBtn1" class="custom-prev">Prev</button>
               
                 <!-- Custom Pagination -->
@@ -125,7 +125,7 @@
                 </div>
               
                 <button id="nextBtn1" class="custom-next">Next</button>
-              </div>
+              </div> --}}
         </div>
         {{-- <div class="carousel-container">
             <div class="carousel">
