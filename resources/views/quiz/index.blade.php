@@ -119,108 +119,65 @@
         }
 </style>
 @section('content')
-    <section class="quiz-cont">
-        <div class="container">
-            <h2>KETAHUI BISNIS ANDA</h2>
-            <div class="progress-bar">
-                <div class="progress"></div>
+<section class="quiz-cont">
+    <div class="container">
+        <h2>Form Kuisioner</h2>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <form method="POST" action="{{ route('kuisioner.store') }}" onsubmit="return validateForm();">
+            @csrf
+
+            <!-- TUJUAN -->
+            <label>Apa Tujuan Utama Anda?<span class="required">*</span></label>
+            <div class="radio-group">
+                <div class="quiz-answer"><input type="radio" name="tujuan" value="meningkatkan-penjualan"> Meningkatkan penjualan</div>
+                <div class="quiz-answer"><input type="radio" name="tujuan" value="menarik-konten"> Membuat konten menarik</div>
+                <div class="quiz-answer"><input type="radio" name="tujuan" value="membantu-audience"> Informasi untuk audience</div>
+                <div class="quiz-answer"><input type="radio" name="tujuan" value="trend-market"> Strategi branding</div>
             </div>
 
-            <form>
-                {{-- <label>Siapa Anda?<span class="required">*</span></label> --}}
-                <div class="radio-group">
-                    {{-- <div class="quiz-answer">
-                        <input type="radio" id="pemilik-bisnis" name="siapa-anda">
-                        <small for="pemilik-bisnis">Saya adalah pemilik bisnis kecil dan ingin meningkatkan penjualan
-                            online.
-                        </small>
-                    </div> --}}
-                    {{-- <div class="quiz-answer">
-                        <input type="radio" id="digital-strategist" name="siapa-anda">
-                        <small for="digital-strategist">Saya seorang perencana digital yang merancang strategi dari
-                            awal.</small>
-                    </div> --}}
-                    {{-- <div class="quiz-answer">
-                        <input type="radio" id="kreatif-branding" name="siapa-anda">
-                        <small for="kreatif-branding">Saya seorang kreatif yang ingin mengembangkan branding dan strategi
-                            pemasaran saya.</small>
-                    </div> --}}
-                </div>
+            <!-- TANTANGAN -->
+            <label>Apa Tantangan Terbesar Anda Saat Ini?<span class="required">*</span></label>
+            <div class="radio-group">
+                <div class="quiz-answer"><input type="checkbox" name="tantangan[]" value="engagement"> Engagement rendah</div>
+                <div class="quiz-answer"><input type="checkbox" name="tantangan[]" value="menjual-produk"> Tidak tahu cara jual</div>
+                <div class="quiz-answer"><input type="checkbox" name="tantangan[]" value="tidak-punya-waktu"> Tidak punya waktu</div>
+                <div class="quiz-answer"><input type="checkbox" name="tantangan[]" value="bimbingan"> Butuh bimbingan</div>
+                <div class="quiz-answer"><input type="checkbox" name="tantangan[]" value="lainnya"> Lainnya</div>
+            </div>
 
-                <label for="jenis-bisnis">Apa Jenis Bisnis Anda?<span class="required">*</span></label>
-                <select id="jenis-bisnis">
-                    <option value="">Pilih jenis bisnis yang sedang Anda jalani</option>
-                </select>
+            <!-- SOCIAL COMMERCE -->
+            <label>Apakah Anda Pernah Menggunakan Platform Social Commerce?<span class="required">*</span></label>
+            <div class="radio-group">
+                <div class="quiz-answer"><input type="radio" name="social_commerce" value="instagram-shopping"> Instagram Shopping</div>
+                <div class="quiz-answer"><input type="radio" name="social_commerce" value="tiktok-shop"> TikTok Shop</div>
+                <div class="quiz-answer"><input type="radio" name="social_commerce" value="whatsapp-business"> WhatsApp Business</div>
+                <div class="quiz-answer"><input type="radio" name="social_commerce" value="tidak-menggunakan"> Tidak pernah</div>
+            </div>
 
-                <label>Apa Tujuan Utama Anda?<span class="required">*</span></label>
-                <div class="radio-group">
-                    <div class="quiz-answer">
-                        <input type="radio" id="meningkatkan-penjualan" name="tujuan">
-                        <small for="meningkatkan-penjualan">Saya ingin mencoba social commerce dan meningkatkan
-                            penjualan.</small>
-                    </div>
-                    <div class="quiz-answer">
-                        <input type="radio" id="menarik-konten" name="tujuan">
-                        <small for="menarik-konten">Saya ingin mengetahui cara membuat konten yang lebih menarik.</small>
-                    </div>
-                    <div class="quiz-answer">
-                        <input type="radio" id="membantu-audience" name="tujuan">
-                        <small for="membantu-audience">Saya membutuhkan informasi dan ide untuk audience saya.</small>
-                    </div>
-                    <div class="quiz-answer">
-                        <input type="radio" id="trend-market" name="tujuan">
-                        <small for="trend-market">Saya ingin mengetahui strategi branding untuk bisnis saya.</small>
-                    </div>
-                </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
 
-                <label>Apa Tantangan Terbesar Anda Saat Ini?<span class="required">*</span></label>
-                <div class="radio-group">
-                    <div class="quiz-answer">
-                        <input type="checkbox" id="engagement" name="tantangan">
-                        <small for="engagement">Saya kesulitan mendapatkan engagement di media sosial.</small>
-                    </div>
-                    <div class="quiz-answer">
-                        <input type="checkbox" id="menjual-produk" name="tantangan">
-                        <small for="menjual-produk">Saya tidak tahu cara menjual via online (Instagram/TikTok Shop).</small>
-                    </div>
-                    <div class="quiz-answer">
-                        <input type="checkbox" id="tidak-punya-waktu" name="tantangan">
-                        <small for="tidak-punya-waktu">Saya tidak punya waktu untuk membuat konten.</small>
-                    </div>
-                    <div class="quiz-answer">
-                        <input type="checkbox" id="bimbingan" name="tantangan">
-                        <small for="bimbingan">Saya membutuhkan bimbingan tentang strategi digital.</small>
-                    </div>
-                    <div class="quiz-answer">
-                        <input type="checkbox" id="lainnya" name="tantangan">
-                        <small for="lainnya">Lainnya.</small>
-                    </div>
+<script>
+function validateForm() {
+    const tujuan = document.querySelector('input[name="tujuan"]:checked');
+    const tantangan = document.querySelectorAll('input[name="tantangan[]"]:checked');
+    const social = document.querySelector('input[name="social_commerce"]:checked');
 
-                    <label>Apakah Anda Pernah Menggunakan Platform Social Commerce?<span class="required">*</span></label>
-                    <div class="radio-group">
-                        <div class="quiz-answer">
-                            <input type="radio" id="instagram-shopping" name="social-commerce">
-                            <small for="instagram-shopping">Ya, saya menggunakan Instagram Shopping.</small>
-                        </div>
-                        <div class="quiz-answer">
-                            <input type="radio" id="tiktok-shop" name="social-commerce">
-                            <small for="tiktok-shop">Ya, saya menggunakan TikTok Shop.</small>
-                        </div>
-                        <div class="quiz-answer">
-                            <input type="radio" id="whatsapp-business" name="social-commerce">
-                            <small for="whatsapp-business">Ya, saya menggunakan WhatsApp Business.</small>
-                        </div>
-                        <div class="quiz-answer">
-                            <input type="radio" id="tidak-menggunakan" name="social-commerce">
-                            <small for="tidak-menggunakan">Tidak, saya tidak pernah menggunakan platform tersebut.</small>
-                        </div>
-                    </div>
+    if (!tujuan || tantangan.length === 0 || !social) {
+        alert('Semua pertanyaan wajib diisi!');
+        return false;
+    }
 
-                    <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
+    return true;
+}
+</script>
 @endsection
+
 @section('footer')
     <h6>footer</h6>
 @endsection

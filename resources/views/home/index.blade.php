@@ -57,13 +57,24 @@
                     <span>{{ $translator->translate("Let's customize your experience") }}</span>
                 </h1>
                 <div class="plan-container-grid">
-                  <a href="/quiz">
-                    <div class="container-one"  style="padding: 20px;">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p class="text-with-border">{{ $translator->translate('Small Business Owner') }}</p>
-                    </div>
-                  </a>
-
+                    @auth
+                    <a href="/quiz">
+                        <div class="container-one" style="padding: 20px;">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p class="text-with-border">{{ $translator->translate('Small Business Owner') }}</p>
+                        </div>
+                    </a>
+                @endauth
+                
+                @guest
+                    <a href="/login" onclick="alert('Silakan login terlebih dahulu untuk mengakses kuis ini.')">
+                        <div class="container-one" style="padding: 20px;">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p class="text-with-border">{{ $translator->translate('Small Business Owner') }}</p>
+                        </div>
+                    </a>
+                @endguest
+                
                   <a href="/quiz2">
                     <div class="container-two"  style="padding: 20px;">
                         <i class="fa-solid fa-headset"></i>
@@ -186,11 +197,8 @@
                 <p class="text-orange-600 text-xl font-bold">Rp 0</p>
     
                 <div class="pt-4">
-<<<<<<< HEAD
-                    <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-900 transition">
-=======
+                    {{-- <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-900 transition"> --}}
                     <a href="{{ route('blank-page') }}" class="inline-flex items-center gap-2 bg-[#F26522] text-white px-5 py-2 rounded-full hover:bg-yellow-600 transition">
->>>>>>> 5b3333cae8da4889c888cdb3b25b63918a2fa6b1
                         <i class="fa-solid fa-cart-shopping"></i>
                         {{ $translator->translate('Shop now') }}
                     </a>

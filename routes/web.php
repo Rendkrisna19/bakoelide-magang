@@ -26,6 +26,9 @@ Route::get('/webinar', function () {
 Route::get('/contact', function () {
     return view('contact.index');
 })->name('contact')->middleware('translate');
+Route::get('/iner-contact', function () {
+    return view('contact.inner');
+})->name('inner')->middleware('translate');
 
 Route::get('/products', function () {
     return view('product.index');
@@ -108,3 +111,30 @@ Route::get('/user-dashboard', function () {
 Route::get('/chart', function () {
     return view('chart.index');
 })->name('chart')->middleware('translate');
+
+//course page
+
+Route::get('/course', function () {
+    return view('course.index');
+})->name('course')->middleware('translate');
+Route::get('/quiz-course', function () {
+    return view('course.quiz');
+})->name('quiz-course')->middleware('translate');
+Route::get('/certifikat-course', function () {
+    return view('course.certifikat');
+})->name('certifikat-course')->middleware('translate');
+Route::get('/taskmodul2', function () {
+    return view('course.task2');
+})->name('task2-course')->middleware('translate');
+
+
+
+//backend kuisioner 
+use App\Http\Controllers\KuisionerController;
+
+Route::post('/kuisioner', [KuisionerController::class, 'store'])->name('kuisioner.store');
+
+
+Route::get('/digital-marketer', function () {
+    return view('quiz.result-quiz1');
+})->name('result1')->middleware('translate');

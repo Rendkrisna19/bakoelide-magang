@@ -19,10 +19,13 @@
                     <div class="flow-icon">
                         <i class="fa-regular fa-lightbulb"></i>
                     </div>
-                    <div class="flow-year">
-                        <h1>2023</h1>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
+                    <a href="/iner-contact" class="block">
+                        <div class="flow-year cursor-pointer hover:opacity-80 transition">
+                            <h1>2023</h1>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </a>
+                    
                     <div class="flow-desc">
                         <h1 class="flow-desc-title">{{ $translator->translate('inspiration') }}</h1>
                         <p class="flow-desc-p">
@@ -34,10 +37,12 @@
                     <div class="flow-icon">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <div class="flow-year">
+                    <a href="/iner-contact" class="block">
+                    <div class="flow-year cursor-pointer hover:opacity-80 transition">
                         <h1>2024</h1>
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                    </a>
                     <div class="flow-desc">
                         <h1 class="flow-desc-title">{{ $translator->translate('recruite team') }}</h1>
                         <p class="flow-desc-p">
@@ -49,10 +54,12 @@
                     <div class="flow-icon">
                         <i class="fa-solid fa-desktop"></i>
                     </div>
-                    <div class="flow-year">
+                    <a href="/iner-contact" class="block">
+                    <div class="flow-year cursor-pointer hover:opacity-80 transition">
                         <h1>2024</h1>
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                    </a>
                     <div class="flow-desc">
                         <h1 class="flow-desc-title">{{ $translator->translate('build system') }}</h1>
                         <p class="flow-desc-p">
@@ -64,10 +71,12 @@
                     <div class="flow-icon">
                         <i class="fa-regular fa-handshake"></i>
                     </div>
-                    <div class="flow-year">
+                    <a href="/iner-contact" class="block"></a>
+                    <div class="flow-year cursor-pointer hover:opacity-80 transition">
                         <h1>2025</h1>
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
+                </a>
                     <div class="flow-desc">
                         <h1 class="flow-desc-title">{{ $translator->translate('services') }}</h1>
                         <p class="flow-desc-p">
