@@ -8,7 +8,7 @@
 
     <!-- Left Content -->
     <div class="md:col-span-2 space-y-4">
-        <a href="#" class="text-sm text-gray-600">&larr; Kembali</a>
+        <a href="/digital-marketer" class="text-sm text-gray-600">&larr; Kembali</a>
         <h1 class="text-lg font-bold border p-4 rounded border-orange-400">
             Cara Membuat Konten Menarik Instagram Khusus Small Business Owner
         </h1>

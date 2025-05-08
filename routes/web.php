@@ -135,6 +135,9 @@ use App\Http\Controllers\KuisionerController;
 Route::post('/kuisioner', [KuisionerController::class, 'store'])->name('kuisioner.store');
 
 
-Route::get('/digital-marketer', function () {
-    return view('quiz.result-quiz1');
-})->name('result1')->middleware('translate');
+use App\Http\Controllers\DigitalMarketerController;
+
+Route::get('/digital-marketer', [DigitalMarketerController::class, 'result1'])
+    ->name('result1')
+    ->middleware('translate');
+    Route::get('image/{filename}', [DigitalMarketerController::class, 'showImage'])->name('image.show');
