@@ -4,7 +4,7 @@
 @section('hero')
     <section class="product-hero">
         <div class="product-hero-content">
-            <h1>
+            <h1> 
                 {{ $translator->translate('Welcome!') }}
             </h1>
             <br>
