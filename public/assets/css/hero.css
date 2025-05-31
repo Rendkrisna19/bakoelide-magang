@@ -10,7 +10,7 @@
     /* justify-content: center; */
     /* text-align: center; */
     color: var(--white);
-    background: url("../../assets/icon/hero.gif") no-repeat center center/cover;
+    background: url("../..//public/assets/images/chat2.png") no-repeat center center/cover;
     margin-top: 60px;
 }
 
