@@ -6,7 +6,7 @@
 <section class="hero">
     <div class="hero-content container mx-auto px-6 text-center sm:text-left">
         <h1 class="text-2xl sm:text-4xl font-bold leading-snug sm:leading-tight mb-4">
-            {{ $translator->translate('eeEmpower Your Business') }} <br>
+            {{ $translator->translate('Empower Your Business') }} <br>
             {{ $translator->translate('With creative') }} <br>
             {{ $translator->translate('solutions') }}
         </h1>
